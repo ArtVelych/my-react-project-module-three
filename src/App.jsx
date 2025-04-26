@@ -7,10 +7,17 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import LangSwitcher from "./components/LangSwitcher/LangSwitcher";
 import LoginFormControlled from "./components/LoginFormControlled/LoginFormControlled";
 
-import initialTasks from "./tasks.json";
+// import initialTasks from "./tasks.json";
 import Form from "./components/Collection of Elements/Form/Form";
 import Filter from "./components/Collection of Elements/Filter/Filter";
 import TaskList from "./components/Collection of Elements/TaskList/TaskList";
+import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
+import FeedbackFormTwo from "./components/FeedbackFormTwo/FeedbackFormTwo";
+import FeedbackFormThree from "./components/FeedbackFormThree/FeedbackFormThree";
+import FeedbackFormFour from "./components/FeedbackFormFour/FeedbackFormFour";
+import FeedbackFormFive from "./components/FeedbackFormFive/FeedbackFormFive";
+import FeedbackFormSix from "./components/FeedbackFormSix/FeedbackFormSix";
+import FeedbackFormSeven from "./components/FeedbackFormSeven/FeedbackFormSeven";
 
 // =================================== Task 1: Using Forms ==============================
 // const App = () => {
@@ -171,31 +178,115 @@ import TaskList from "./components/Collection of Elements/TaskList/TaskList";
 
 // =================================== Task 8: Video Workshop: Collection of Elements ==============================
 
-export default function App() {
-  const [tasks, setTasks] = useState(initialTasks);
-  const [filter, setFilter] = useState("");
+// export default function App() {
+//   const [tasks, setTasks] = useState(initialTasks);
+//   const [filter, setFilter] = useState("");
 
-  const addTask = (newTask) => {
-    setTasks((prevTasks) => {
-      return [...prevTasks, newTask];
-    });
-  };
+//   const addTask = (newTask) => {
+//     setTasks((prevTasks) => {
+//       return [...prevTasks, newTask];
+//     });
+//   };
 
-  const deleteTask = (taskId) => {
-    setTasks((prevTasks) => {
-      return prevTasks.filter((task) => task.id !== taskId);
-    });
-  };
+//   const deleteTask = (taskId) => {
+//     setTasks((prevTasks) => {
+//       return prevTasks.filter((task) => task.id !== taskId);
+//     });
+//   };
 
-  const visibleTasks = tasks.filter((task) =>
-    task.text.toLowerCase().includes(filter.toLowerCase())
-  );
+//   const visibleTasks = tasks.filter((task) =>
+//     task.text.toLowerCase().includes(filter.toLowerCase())
+//   );
 
+//   return (
+//     <div>
+//       <Form onAdd={addTask} />
+//       <Filter value={filter} onFilter={setFilter} />
+//       <TaskList tasks={visibleTasks} onDelete={deleteTask} />
+//     </div>
+//   );
+// }
+
+// =================================== Task 9.1: Formik ==============================
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FeedbackForm />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// =================================== Task 9.2: Formik ==============================
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FeedbackFormTwo />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// =================================== Task 9.3: Formik ==============================
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FeedbackFormThree />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// =================================== Task 9.4: Formik ==============================
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FeedbackFormFour />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// =================================== Task 9.5: Formik ==============================
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FeedbackFormFive />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// =================================== Task 9.6: Formik ==============================
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FeedbackFormSix />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// =================================== Task 9.7: Formik ==============================
+
+const App = () => {
   return (
     <div>
-      <Form onAdd={addTask} />
-      <Filter value={filter} onFilter={setFilter} />
-      <TaskList tasks={visibleTasks} onDelete={deleteTask} />
+      <FeedbackFormSeven />
     </div>
   );
-}
+};
+
+export default App;
